@@ -1,32 +1,99 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+<v-app>
+  <v-container style="color: #5a5a5a;">
+<v-card  class="mx-auto" flat>
+    <v-card flat >
+    <v-card-title>
+      <div class="d-flex align-center">
+        <v-img
+          src="./assets/logo.png"
+          max-height="100"
+          contain
+          max-width="250"
+          @click="changeRoute('Contact Us')"
+        />
+
+      </div>
+
+      <v-spacer></v-spacer>
+      <span>
+        Contact us: 
+      </span>
+      <v-btn
+        icon
+        href="https://www.facebook.com/Camroopine-international-107696214964039"
+        target="_blank"
+      >
+        <v-icon color="blue darken-2">mdi-facebook</v-icon>
+      </v-btn>
+      <v-btn
+        icon
+        href="https://www.linkedin.com/company/camroopine-international/"
+        target="_blank"
+      >
+        <v-icon color="blue darken-2">mdi-linkedin</v-icon>
+      </v-btn>
+      <v-btn
+        icon
+        href="mailto:sales@camroopineint.com"
+      >
+        <v-icon color="red darken-2">mdi-email</v-icon>
+      </v-btn>
+    </v-card-title>
+    </v-card>
+
+    <v-main>
+      <v-card>
+    <v-tabs
+      v-model="tab"
+      dark
+    >
+      <v-tab
+        v-for="item in items"
+        :key="item.tab"
+        @click="changeRoute(item.routeName)"
+      >
+        {{ item.tab }}
+      </v-tab>
+    </v-tabs>
+
+  </v-card>
     <router-view/>
-  </div>
+
+    </v-main>
+</v-card>
+  </v-container>
+</v-app>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Vue from 'vue';
 
-#nav {
-  padding: 30px;
-}
+export default Vue.extend({
+  name: 'App',
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+  data () {
+      return {
+        tab: null,
+        items: [
+          { tab: 'Contact Us', routeName:'Contact Us' },
+          { tab: 'Home', routeName:'Home' }
+        ],
+      }
+    },
+  methods:{
+    changeRoute(routeName) {
+      this.$router.push({name:routeName})
+    }
+  },
+  mounted(){
+    if (this.$route.name == null){
+      this.tab=0;
+      this.$router.push({name:'Contact Us'})
+    }
+    else if(this.$route.name !== 'Contact Us'){
+      this.tab=1;
+    }
+  }
+});
+</script>
