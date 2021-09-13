@@ -1,27 +1,27 @@
-import Vue from 'vue'
-import VueRouter, { RouteConfig } from 'vue-router'
-import Home from '../views/Home.vue'
-import ContactUs from '../components/ContactUs.vue'
+import Vue from "vue";
+import VueRouter, { RouteConfig } from "vue-router";
+import Home from "../views/Home.vue";
+import ContactUs from "../components/ContactUs.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
-    path: '/Home',
-    name: 'Home',
-    component: Home
+    path: "/Home",
+    name: "Home",
+    component: Home,
   },
   {
-    path: '/ContactUs',
-    name: 'Contact Us',
-    component: ContactUs
-  }
-]
+    path: "/ContactUs",
+    name: "Contact Us",
+    component: ContactUs,
+  },
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
