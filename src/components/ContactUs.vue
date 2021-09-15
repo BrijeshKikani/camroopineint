@@ -28,7 +28,7 @@
           </v-card-text>
           <v-card-text class="py-0 text-h5">
             Phone :
-            <a href="tel:+9195370003666">+91-95370003666</a>
+            <a href="tel:+919537003666">+91-9537003666</a>
           </v-card-text>
 
           <v-card-text class="py-0 text-h5">
@@ -44,17 +44,8 @@
     </v-card>
 
     <v-card class="my-5">
-      <v-card-subtitle>
-        Easily accessible with over 18,000 sqft Facility , Located Just North of
-        the Airport, off Airport Road North of Derry, just South of Steeles
-      </v-card-subtitle>
+      <v-card-subtitle> </v-card-subtitle>
       <GoogleMap />
-    </v-card>
-
-    <v-card height="100" class="my-5">
-      <v-card-title class="pt-9">
-        Manufacturer of Architectural Aluminum Products
-      </v-card-title>
     </v-card>
   </v-container>
 </template>

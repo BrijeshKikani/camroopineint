@@ -49,6 +49,11 @@
             </v-tabs>
           </v-card>
           <router-view />
+          <v-card height="100" class="my-5">
+            <v-card-title class="pt-9">
+              Manufacturer of Aluminum extrusion Products
+            </v-card-title>
+          </v-card>
         </v-main>
       </v-card>
     </v-container>
