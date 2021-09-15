@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-container style="color: #5a5a5a">
+    <v-container class="pa-0" style="color: #5a5a5a">
       <v-card class="mx-auto" flat>
         <v-card flat>
           <v-card-title>

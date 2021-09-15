@@ -17,7 +17,7 @@ export default Vue.extend({
   name: "GoogleMap",
   data() {
     return {
-      center: { lat: 21.15394427909781, lng: 72.84870640244903 },
+      center: { lat: 21.151099922717272, lng: 72.84864648543207 },
       markers: [],
     };
   },
